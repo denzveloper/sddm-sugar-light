@@ -26,11 +26,12 @@ Column {
     width: parent.width / 2
 
     Label {
+        id: hostnameText
         anchors.horizontalCenter: parent.horizontalCenter
         font.pointSize: config.HeaderText !=="" ? root.font.pointSize * 3 : 0
         color: root.palette.text
         renderType: Text.QtRendering
-        text: config.HeaderText
+        text: sddm.hostName ? sddm.hostName : config.HeaderText
     }
 
     Label {
