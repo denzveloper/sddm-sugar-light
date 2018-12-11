@@ -25,13 +25,21 @@ Column {
     spacing: 0
     width: parent.width / 2
 
+//    Label {
+//        anchors.horizontalCenter: parent.horizontalCenter
+//        font.pointSize: config.HeaderText !=="" ? root.font.pointSize * 3 : 0
+//        color: root.palette.text
+//        renderType: Text.QtRendering
+//        text: config.HeaderText
+//    }
+
     Label {
         id: hostnameText
-        anchors.horizontalCenter: parent.horizontalCenter
+	anchors.horizontalCenter: parent.horizontalCenter
         font.pointSize: config.HeaderText !=="" ? root.font.pointSize * 3 : 0
         color: root.palette.text
         renderType: Text.QtRendering
-        text: sddm.hostName ? sddm.hostName : config.HeaderText
+	text: sddm.hostName ? sddm.hostName : config.HeaderText
     }
 
     Label {

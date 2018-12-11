@@ -119,6 +119,19 @@ Column {
             KeyNavigation.down: revealSecret
         }
 
+	Button {
+            id: passwordIcon
+            anchors.horizontalCenter: parent.left
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenterOffset: username.height * 0.6
+            icon.height: username.height * 0.4
+            icon.width: username.height * 0.4
+            enabled: false
+            icon.color: root.palette.text
+            icon.source: Qt.resolvedUrl("../Assets/Pass.svgz")
+        }
+
+
         states: [
             State {
                 name: "focused"
